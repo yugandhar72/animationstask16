@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        margin: 400px;
+      }
+      .circle {
+        position: relative;
+        top: 160px;
+        left: 160px;
+        height: 40px;
+        width: 40px;
+        background-color: black;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+      }
+      .blade1 {
+        margin-top: 15px;
+        position: absolute;
+        width: 500px;
+        height: 20px;
+        background-color: rgba(3, 3, 3, 0.999);
+        border-radius: 60%;
+        animation: blade1 2s linear infinite;
+      }
+      .blade2 {
+        margin-top: 15px;
+        position: absolute;
+        width: 500px;
+        height: 20px;
+        background-color: grey;
+        border-radius: 60%;
+        animation: blade2 2s linear infinite;
+      }
+      @keyframes blade1 {
+        0% {
+          transform: rotate(90deg);
+        }
+        100% {
+          transform: rotate(270deg);
+        }
+      }
+      @keyframes blade2 {
+        0% {
+          transform: rotate(180deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .stand {
+        position: relative;
+        height: 300px;
+        width: 15px;
+        background-color: black;
+        display: flex;
+        align-content: baseline;
+        left: 0px;
+        top: 39px;
+        z-index: -1;
+        animation: stand 1s linear;
+      }
+
+
+
+      /* car race css code */
+      .containercars{
+            background-color:rgb(0, 0, 0);
+            padding: 5px;
+        }
+        .car1{
+            animation: car1 2s ease-out  infinite ;
+            border-bottom: 3px dashed black;
+        }
+        @keyframes car1{
+            0%{
+                transform: translate(1000px,0px);
+            }
+        }
+        .car2{
+            animation: car2 2s ease-out  infinite ;
+        }
+        @keyframes car2{
+            20%{
+                transform: translate(1000px,0px);
+            } 
+        }
+        .car3{
+            animation: car3 2s ease-in-out infinite ;
+        }
+        @keyframes car3{
+            50%{
+                transform: translate(1000px,0px);
+            }
+        }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="circle">
+        <div class="blade1"></div>
+        <div class="blade2"></div>
+        <div class="stand"></div>
+      </div>
+    </div>
+
+
+
+    <!-- car race code -->
+
+
+    <div class="containercars">
+        <div><img class="car1" src="./download.jpeg" alt=""></div>
+        <div><img class="car2" src="./download.jpeg" alt=""></div>
+        <div><img  class="car3" src="./download.jpeg" alt=""></div>
+    </div>
+
+  </body>
+</html>
